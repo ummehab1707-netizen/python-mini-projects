@@ -29,7 +29,7 @@ def add_expense(expenses):
     expense = {"date": date, "category": category, "amount": amount}
     expenses.append(expense)
     save_expense(expense)
-    print(f"✅ Expense of ₹{amount} added under {category}!")
+    print(f"Expense of ₹{amount} added under {category}!")
 
 def view_expenses(expenses):
     if not expenses:
@@ -51,7 +51,7 @@ def view_by_category(expenses):
     summary = {}
     for e in expenses:
         summary[e['category']] = summary.get(e['category'], 0) + e['amount']
-    print("\n📊 Expense Summary by Category:")
+    print("\n Expense Summary by Category:")
     print("-" * 30)
     for cat, amt in sorted(summary.items()):
         print(f"  {cat:<20} ₹{amt:.2f}")
@@ -63,7 +63,7 @@ def delete_all(expenses):
     if confirm.lower() == "yes":
         open(FILE, "w").close()
         expenses.clear()
-        print("✅ All expenses deleted.")
+        print("All expenses deleted.")
 
 def main():
     print("=== Expense Tracker ===")

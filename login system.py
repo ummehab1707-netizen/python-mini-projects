@@ -24,37 +24,37 @@ def register(users):
     print("\n--- Register ---")
     username = input("Choose a username: ").strip()
     if username in users:
-        print("❌ Username already exists! Try a different one.")
+        print(" Username already exists! Try a different one.")
         return
     password = input("Choose a password: ").strip()
     if len(password) < 6:
-        print("❌ Password must be at least 6 characters!")
+        print(" Password must be at least 6 characters!")
         return
     confirm = input("Confirm password: ").strip()
     if password != confirm:
-        print("❌ Passwords do not match!")
+        print(" Passwords do not match!")
         return
     hashed = hash_password(password)
     users[username] = hashed
     save_user(username, hashed)
-    print(f"✅ Account created successfully! Welcome, {username}!")
+    print(f" Account created successfully! Welcome, {username}!")
 
 def login(users):
     print("\n--- Login ---")
     username = input("Enter username: ").strip()
     if username not in users:
-        print("❌ Username not found!")
+        print(" Username not found!")
         return False, None
     password = input("Enter password: ").strip()
     if hash_password(password) == users[username]:
-        print(f"✅ Login successful! Welcome back, {username}!")
+        print(f" Login successful! Welcome back, {username}!")
         return True, username
     else:
-        print("❌ Incorrect password!")
+        print(" Incorrect password!")
         return False, None
 
 def dashboard(username):
-    print(f"\n🏠 Dashboard — Logged in as: {username}")
+    print(f"\n Dashboard — Logged in as: {username}")
     print("You can add more features here!")
     input("Press Enter to logout...")
 

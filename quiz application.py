@@ -69,21 +69,21 @@ def run_quiz():
             print(f"  {opt}")
         answer = input("Your answer: ").strip().upper()
         if answer == q['answer']:
-            print("✅ Correct!")
+            print("Correct!")
             score += 1
         else:
-            print(f"❌ Wrong! Correct answer: {q['answer']}")
+            print(f" Wrong! Correct answer: {q['answer']}")
 
     print("\n" + "=" * 40)
     print(f"Quiz Over! {name}, your score: {score}/{len(questions)}")
     if score == len(questions):
-        print("🏆 Perfect Score! Excellent!")
+        print(" Perfect Score! Excellent!")
     elif score >= 7:
-        print("🎉 Great job!")
+        print(" Great job!")
     elif score >= 5:
-        print("👍 Good effort!")
+        print(" Good effort!")
     else:
-        print("📚 Keep practicing!")
+        print("Keep practicing!")
     print("=" * 40)
 
 if __name__ == "__main__":

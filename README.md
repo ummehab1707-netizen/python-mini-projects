@@ -5,8 +5,7 @@ student. This repository contains some small
 Python projects I built while learning Python 
 during my first year of college.
 
-These are beginner level projects so don't 
-expect anything fancy — but they work.
+
 
 ## What's inside
 
